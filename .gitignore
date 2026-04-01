@@ -17,3 +17,6 @@ credentials.*
 
 # Claude Code
 .claude/
+
+# Local working files
+tasks/

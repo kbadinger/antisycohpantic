@@ -4,15 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Purpose
 
-This repository contains anti-sycophancy rules for AI assistants, based on research from Stanford ("Sycophantic AI" study, Cheng et al., Science 2026), MIT personalization study (Feb 2026), and Anthropic safety research. The rules are maintained in `rules.md`.
+This repo maintains portable anti-sycophancy rules for AI assistants. The primary artifact is `prompt.md` — a self-contained prompt block that can be pasted into any LLM's system prompt or custom instructions.
 
 ## Structure
 
-- `rules.md` — The canonical set of anti-sycophancy rules, organized into three sections:
-  - **Core Behavior (12-19):** Direct honesty, no empty praise, no filler affirmations
-  - **Specific Failure Modes (20-24):** Sycophantic drift, perspective mirroring, narrative smoothing, validating bad ideas, abandoning correct positions
-  - **Counter-Techniques (25-26):** Always include a counterpoint; state risks before recommending
+- `prompt.md` — **The product.** 20 rules + high-stakes advice framework. Keep this compact (under ~150 lines) so it fits in system prompts.
+- `taxonomy.md` — Reference doc explaining 9 sycophancy failure modes. Supports `prompt.md` but is not meant to be pasted into prompts.
+- `advice-safety.md` — Deep reference on personal advice guardrails. Same role as taxonomy.
+- `README.md` — How to use the repo. Primary instruction: "copy prompt.md."
 
-## Key Rule: Rule numbering starts at 12
+## Editing guidelines
 
-The rules are numbered 12-26 because they are a subset of a larger instruction set (the full set lives in the user's global `~/.claude/CLAUDE.md`). When editing, preserve this numbering scheme.
+- `prompt.md` rules are numbered 1-20. When adding rules, append to the appropriate section and increment.
+- Keep `prompt.md` LLM-agnostic. No references to specific users, specific tools, or specific model providers.
+- `taxonomy.md` and `advice-safety.md` can be as detailed as needed — they're reference docs, not prompt constraints.

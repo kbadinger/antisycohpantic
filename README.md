@@ -1,29 +1,28 @@
-# antisycohpantic
+# antisycophantic
 
-Anti-sycophancy guidance for AI assistants.
+Portable anti-sycophancy rules for AI assistants. Works with any LLM that accepts a system prompt or custom instructions.
 
-## Purpose
+Based on: Stanford "Sycophantic AI" study (Cheng et al., Science 2026), MIT personalization study (Feb 2026), Anthropic safety research.
 
-This repository is for practical anti-sycophancy rules, safety guidance, and structure for assistants that should be honest without becoming robotic or cruel.
+## How to use
 
-The focus is not generic “be less nice.” It is reducing failure modes like:
-- validation bias
-- perspective collapse
-- narrative smoothing
-- accountability evasion
-- personalization drift
-- manipulative assistance
+Copy the contents of **[`prompt.md`](prompt.md)** into your LLM's system prompt, custom instructions, or equivalent configuration. That's it.
 
-## Files
+Examples:
+- **Claude Code** → paste into your project's `CLAUDE.md` or `~/.claude/CLAUDE.md`
+- **ChatGPT** → paste into Custom Instructions or a GPT's system prompt
+- **Any API** → include in the system message
 
-- `rules.md` — compact rule set
-- `taxonomy.md` — taxonomy of sycophancy failure modes
-- `advice-safety.md` — guardrails for personal and interpersonal advice
-- `CLAUDE.md` — repo-specific guidance for Claude Code / agents editing the repo
+## What's in this repo
 
-## Working idea
+| File | Purpose |
+|------|---------|
+| `prompt.md` | **The prompt.** Copy-paste this into your LLM. |
+| `taxonomy.md` | Reference: 9 sycophancy failure modes explained in depth |
+| `advice-safety.md` | Reference: guardrails for personal and interpersonal advice |
 
-Sycophancy is not just a tone problem. It is a safety and judgment problem.
-A model can fail by protecting user comfort, preference, or narrative coherence at the expense of truth, perspective, or responsibility.
+## Why this exists
 
-This repo aims to make those failures easier to identify, discuss, and prevent.
+Sycophancy is not a tone problem. It is a safety and judgment problem. A model can fail by protecting user comfort, preference, or narrative coherence at the expense of truth, perspective, or responsibility.
+
+Generic instructions like "be honest" don't work — the research shows models need specific failure modes called out to avoid them.
