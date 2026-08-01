@@ -2,7 +2,7 @@
 
 Portable anti-sycophancy rules for AI assistants. Works with any LLM that accepts a system prompt or custom instructions.
 
-Based on: Stanford "Sycophantic AI" study (Cheng et al., Science 2026), MIT personalization study (Feb 2026), Anthropic safety research.
+Maintained against current research and provider guidance, including Cheng et al. ([*Science*, 2026](https://doi.org/10.1126/science.aec8352)), Jain et al. ([CHI 2026](https://doi.org/10.1145/3772318.3791915)), and published behavior guidance from Anthropic and OpenAI. See [`MAINTENANCE.md`](MAINTENANCE.md) for the review record and source list.
 
 ## How to use
 
@@ -20,6 +20,7 @@ Examples:
 | `prompt.md` | **The prompt.** Copy-paste this into your LLM. |
 | `taxonomy.md` | Reference: 9 sycophancy failure modes explained in depth |
 | `advice-safety.md` | Reference: guardrails for personal and interpersonal advice |
+| `MAINTENANCE.md` | Review cadence, checklist, evidence, and dated checkpoints |
 
 ## Why this exists
 
