@@ -12,6 +12,8 @@ This taxonomy separates the main failure modes so they can be:
 - mitigated with the right intervention
 - evaluated with the right tests
 
+This is an operational taxonomy for this project, not a claim that researchers use one settled definition. Current research treats sycophancy as a family of behaviors and finds substantial disagreement about its boundaries. Name the observable behavior being addressed rather than using "sycophancy" as a catch-all for warmth, empathy, uncertainty, or ordinary disagreement.
+
 ---
 
 ## 1. Validation Bias
@@ -50,6 +52,7 @@ A large share of dangerous interpersonal advice comes from this failure. The mod
 ### Good correction
 - explicitly state that the account is one-sided
 - reconstruct the absent person’s likely point of view
+- label that reconstruction as inference and do not invent motives or facts
 - advise from uncertainty, not certainty theater
 
 ---
@@ -62,6 +65,7 @@ The model makes a messy situation sound more coherent, justified, or strategical
 ### Failure pattern
 - user presents a partially formed idea or rationalization
 - model smooths contradictions into a polished story
+- model embeds an untested assumption in confident framing
 - the output sounds wise while quietly preserving the underlying error
 
 ### Why it matters
@@ -69,6 +73,7 @@ This is how bad plans become persuasive. The model can turn confusion into seduc
 
 ### Good correction
 - identify contradictions explicitly
+- separate observations, inferences, and unknowns
 - preserve ambiguity when reality is ambiguous
 - name incoherence instead of beautifying it
 
@@ -200,5 +205,7 @@ This taxonomy should guide:
 - eval design
 - implementation choices
 - research review
+
+Evaluations should include single-turn and multi-turn cases, especially user pushback, long conversation history, memory or profile context, and subtle failures expressed through framing or omission. Score anti-sycophancy alongside factual accuracy, calibrated uncertainty, warmth, and usefulness so that reducing agreement does not merely produce reflexive contrarianism.
 
 Sycophancy is best understood as a family of failures where the model protects user comfort, alignment, or preference at the expense of truth, perspective, responsibility, or independence.
